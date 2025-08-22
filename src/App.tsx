@@ -10,8 +10,8 @@ function App() {
       <Header />
 
       <main>
-        <section id="profile">
-          <h2>Hello.</h2>
+        <section id="profile" className="bg-primary custom-container">
+          <h2 className="text-center text-6xl font-bold">Profile</h2>
           <p>
             Lorem ipsum dolor sit amet, vitae volutpat, dui conubia, dolor urna. Non auctor, montes
             nulla distinctio.

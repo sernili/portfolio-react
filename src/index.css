@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Nata+Sans:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
 @theme {
   --font-mono: "Cutive Mono", monospace;
-  --font-body: "Nata Sans", sans-serif;
+  --font-body: "Montserrat", sans-serif;
+
   --color-bg: theme("colors.bg");
   --color-bg: #1f2544;
   --color-text: #fff;
@@ -11,7 +12,7 @@
   --color-secondary: #81689d;
   --color-tertiary: #ffd0ec;
 
-  /* @keyframes comeUp {
+  @keyframes comeUp {
     0% {
       transform: translateY(30px);
       opacity: 0;
@@ -42,7 +43,7 @@
       transform: scale(1);
       visibility: visible;
     }
-  } */
+  }
 }
 
 @layer base {
@@ -54,7 +55,15 @@
     min-height: 100vh;
     margin: 0;
     font-family: var(--font-body);
+    font-weight: 200;
     background-color: var(--color-bg);
     color: var(--color-text);
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .custom-container {
+    @apply mx-auto w-full max-w-[1280px] px-4 sm:px-6 lg:px-8;
   }
 }
