@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Nata+Sans:wght@100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "Cutive Mono", monospace;
+  --font-body: "Nata Sans", sans-serif;
+  --color-bg: theme("colors.bg");
+  --color-bg: #1f2544;
+  --color-text: #fff;
+  --color-primary: #474f7a;
+  --color-secondary: #81689d;
+  --color-tertiary: #ffd0ec;
+
+  /* @keyframes comeUp {
+    0% {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes comeUp1000 {
+    0% {
+      transform: translateY(1000px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes circleOut {
+    0% {
+      transform: scale(0);
+      visibility: visible;
+    }
+    100% {
+      transform: scale(1);
+      visibility: visible;
+    }
+  } */
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+  }
+}
