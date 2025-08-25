@@ -1,11 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --font-mono: "Cutive Mono", monospace;
-  --font-body: "Montserrat", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-body: "Work Sans", sans-serif;
 
-  --color-bg: #1f2544;
+  --color-dark: #1f2544;
+  --color-darker: #0b051a;
   --color-text: #fff;
   --color-primary: #474f7a;
   --color-secondary: #81689d;
@@ -66,9 +67,14 @@
     margin: 0;
     font-family: var(--font-body);
     font-weight: 200;
-    background-color: var(--color-bg);
+    background-color: var(--color-darker);
     color: var(--color-text);
     scroll-behavior: smooth;
+  }
+
+  .focus-peers > .peer:hover ~ .peer,
+  .focus-peers > .peer:hover + .peer {
+    opacity: 0.2;
   }
 }
 

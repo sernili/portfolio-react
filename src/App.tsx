@@ -17,7 +17,7 @@ function App() {
         <Header />
       </div>
 
-      <main className="from-secondary to-bg bg-linear-to-t">
+      <main className="from-secondary to-darker via-dark bg-linear-to-t">
         <Profile />
 
         <Skills />
