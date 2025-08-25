@@ -2,7 +2,8 @@ import "./App.css"
 import Header from "./components/header"
 import NavBar from "./components/navBar"
 import headerImage from "./assets/img/header.png"
-import profileImage from "./assets/img/ich.jpg"
+import Profile from "./components/profile"
+import Skills from "./components/skills"
 
 function App() {
   return (
@@ -16,72 +17,10 @@ function App() {
         <Header />
       </div>
 
-      <main>
-        <section
-          id="profile"
-          className="custom-container my-20 flex h-screen flex-col items-center justify-center space-y-20"
-        >
-          <div>
-            <h2 className="my-6 text-center text-8xl font-bold">My Profile</h2>
-          </div>
+      <main className="from-secondary to-bg bg-linear-to-t">
+        <Profile />
 
-          <div className="grid grid-cols-[1fr_1.5fr]">
-            <div className="relative h-80 w-80 overflow-hidden rounded-full">
-              <img src={profileImage} alt="profile image" className="h-full w-full object-cover" />
-              <div className="bg-primary absolute inset-0 mix-blend-color"></div>
-            </div>
-            <div className="space-y-6">
-              <h3 className="text-2xl font-bold">
-                Design <span className="text-secondary animate-pulse">.</span>
-              </h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta debitis aut esse,
-                voluptatibus ipsa provident et dolor quisquam doloremque atque pariatur consequuntur
-                saepe odit eligendi, blanditiis modi fugiat ipsam aspernatur.
-              </p>
-
-              <h3 className="text-2xl font-bold">
-                Development <span className="text-secondary animate-pulse">.</span>
-              </h3>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus, id aut enim
-                perspiciatis labore perferendis iure assumenda ipsa veniam rem laboriosam molestias
-                quam cum fuga saepe fugiat sit eligendi commodi.
-              </p>
-
-              <h3 className="text-2xl font-bold">
-                Requirements Engineering <span className="text-secondary animate-pulse">.</span>
-              </h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati mollitia
-                reiciendis numquam, tempora praesentium nemo eos corporis ipsa nam odio amet illo
-                provident dolores perferendis placeat vitae laborum accusantium ab?
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <hr />
-
-        <section id="skills">
-          <h2>My Skills</h2>
-          <div className="skill-row">
-            <h3>Lorem & Ipsum</h3>
-            <p>
-              Lorem ipsum dolor sit amet, quis in duis, iaculis id felis. Consectetuer vestibulum,
-              nunc urna lectus, erat ligula. Hendrerit nam, lectus ante, ut lorem eros.
-            </p>
-          </div>
-          <div className="skill-row">
-            <h3>Lorem Ipsum Dolor</h3>
-            <p>
-              Lorem ipsum dolor sit amet, mauris sed consectetuer. Etiam et eu, bibendum interdum,
-              lacus quis mauris. Curabitur wisi, quisque vel eu, rutrum nam.
-            </p>
-          </div>
-        </section>
-
-        <hr />
+        <Skills />
 
         <section id="projects-overview">
           <h2>My Projects</h2>

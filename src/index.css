@@ -5,12 +5,14 @@
   --font-mono: "Cutive Mono", monospace;
   --font-body: "Montserrat", sans-serif;
 
-  --color-bg: theme("colors.bg");
   --color-bg: #1f2544;
   --color-text: #fff;
   --color-primary: #474f7a;
   --color-secondary: #81689d;
   --color-tertiary: #ffd0ec;
+  --color-accent: #32c7fa;
+
+  --animate-slideDownUnder: slideDownUnder 100ms ease-in-out forwards;
 
   @keyframes comeUp {
     0% {
@@ -42,6 +44,14 @@
     100% {
       transform: scale(1);
       visibility: visible;
+    }
+  }
+  @keyframes slideDownUnder {
+    0% {
+      transform: translateY(-50%);
+    }
+    100% {
+      transform: translateY(0);
     }
   }
 }
