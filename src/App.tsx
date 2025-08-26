@@ -1,9 +1,9 @@
-import "./App.css"
 import Header from "./components/header"
 import NavBar from "./components/navBar"
 import headerImage from "./assets/img/header.png"
 import Profile from "./components/profile"
 import Skills from "./components/skills"
+import Career from "./components/career"
 
 function App() {
   return (
@@ -22,64 +22,7 @@ function App() {
 
         <Skills />
 
-        <section id="projects-overview">
-          <h2>My Projects</h2>
-
-          <div className="project-card-container">
-            <div className="projects-card">
-              <img src="https://picsum.photos/400/250" />
-              <div className="project-text">
-                <h3 className="project-title">Project1</h3>
-                <p className="project-description">Lorem ipsum dolor sit amet.</p>
-              </div>
-            </div>
-
-            <div className="projects-card">
-              <img src="https://picsum.photos/400/250" />
-              <div className="project-text">
-                <h3 className="project-title">Project1</h3>
-                <p className="project-description">Lorem ipsum dolor sit amet.</p>
-              </div>
-            </div>
-
-            <div className="projects-card">
-              <img src="https://picsum.photos/400/250" />
-              <div className="project-text">
-                <h3 className="project-title">Project1</h3>
-                <p className="project-description">Lorem ipsum dolor sit amet.</p>
-              </div>
-            </div>
-
-            <div className="projects-card">
-              <img src="https://picsum.photos/400/250" />
-              <div className="project-text">
-                <h3 className="project-title">Project1</h3>
-                <p className="project-description">Lorem ipsum dolor sit amet.</p>
-              </div>
-            </div>
-
-            <div className="projects-card">
-              <img src="https://picsum.photos/400/250" />
-              <div className="project-text">
-                <h3 className="project-title">Project1</h3>
-                <p className="project-description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, sed?
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="github-link">
-            <h3 className="github-heading">You can also:</h3>
-            <p className="github-text">
-              Check out my{" "}
-              <a href="https://github.com/sernili" className="github-link" target="_blank">
-                GitHub
-              </a>{" "}
-              here!
-            </p>
-          </div>
-        </section>
+        <Career />
 
         <hr />
 
