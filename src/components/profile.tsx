@@ -7,7 +7,7 @@ export default function Profile() {
       className="custom-container my-20 flex h-screen flex-col items-center justify-center space-y-20"
     >
       <div>
-        <h2 className="my-6 text-center text-8xl font-bold">My Profile</h2>
+        <h2 className="my-6 text-center text-8xl font-bold">Expertise</h2>
       </div>
 
       <div className="grid grid-cols-[1fr_1.5fr] items-center">

@@ -29,7 +29,7 @@ export default function NavBar() {
             className="soft-scroll block no-underline transition-all duration-300 group-hover:opacity-40 hover:opacity-100"
             href="#profile"
           >
-            Profile
+            Expertise
           </a>
           <a
             className="soft-scroll block no-underline transition-all duration-300 group-hover:opacity-40 hover:opacity-100"
@@ -39,12 +39,18 @@ export default function NavBar() {
           </a>
           <a
             className="soft-scroll block no-underline transition-all duration-300 group-hover:opacity-40 hover:opacity-100"
-            href="#projects-overview"
+            href="#career"
           >
-            Jobs & Projects
+            Career
           </a>
           <a
-            className="soft-scroll ml-4 block border p-4 no-underline transition-all duration-300 group-hover:opacity-40 hover:opacity-100"
+            className="soft-scroll block no-underline transition-all duration-300 group-hover:opacity-40 hover:opacity-100"
+            href="#projects-overview"
+          >
+            Work
+          </a>
+          <a
+            className="soft-scroll hover:text-darker hover:border-darker ml-4 block border p-4 no-underline transition-all duration-300 hover:bg-white"
             href="#contact-me"
           >
             Get in touch!
