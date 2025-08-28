@@ -112,7 +112,7 @@ export default function Career() {
           {workExperience.map((work, index) => {
             return (
               <details
-                className="group bg-dark relative w-full rounded-xl p-4 hover:cursor-pointer"
+                className="group bg-dark relative w-full rounded-xl p-4"
                 data-index={index}
                 open={openIndexCareer === index}
                 onClick={(event) => handleToggle(index, event, "career")}
@@ -130,7 +130,7 @@ export default function Career() {
                     </div>
                   </div>
                 </summary>
-                <div className="content mt-6 space-y-6">
+                <div className="content mt-6 space-y-6 transition-all duration-300 not-group-open:p-0 group-open:p-2">
                   <ol className="ml-8 list-outside list-disc">
                     {work.details.map((detail) => {
                       return (
@@ -177,7 +177,7 @@ export default function Career() {
                     </div>
                   </div>
                 </summary>
-                <div className="content mt-6 space-y-6">
+                <div className="content mt-6 space-y-6 transition-all duration-300 not-group-open:p-0 group-open:p-2">
                   <ol className="ml-8 list-outside list-disc">
                     <li className="marker:text-accent marker:animate-pulse marker:text-xl">
                       Grade: {school.grade}
