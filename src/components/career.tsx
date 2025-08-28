@@ -1,4 +1,5 @@
 import { MinusIcon, PlusIcon } from "@heroicons/react/16/solid"
+import { useState } from "react"
 
 export default function Career() {
   const workExperience = [
@@ -58,7 +59,8 @@ export default function Career() {
   const education = [
     {
       period: "10/2019 – 04/2021",
-      degree: "M.Sc. Business Psychology (not completed)",
+      degree: "M.Sc. Business Psychology",
+      grade: "not completed",
       institution: "IU International University of Applied Sciences",
     },
     {
@@ -81,31 +83,59 @@ export default function Career() {
     },
   ]
 
+  const [openIndexCareer, setOpenIndexCareer] = useState<number | null>(null)
+  const [openIndexEducation, setOpenIndexEducation] = useState<number | null>(null)
+
+  const handleToggle = (
+    index: number,
+    event: React.MouseEvent<HTMLDetailsElement>,
+    type: string
+  ) => {
+    event.preventDefault() // stop native <details> toggle
+    if (type === "career") {
+      setOpenIndexCareer((prev) => (prev === index ? null : index))
+    } else if (type === "education") {
+      setOpenIndexEducation((prev) => (prev === index ? null : index))
+    }
+  }
+
   return (
     <section id="career">
-      <div className="custom-container my-20 flex h-screen flex-col items-center justify-center space-y-20">
+      <div className="custom-container my-20 flex flex-col items-center justify-center space-y-20">
         <div>
           <h2 className="my-6 text-center text-8xl font-bold">Career</h2>
         </div>
-        <div className="w-full space-y-4">
-          {workExperience.map((work) => {
+        <h3 className="text-2xl font-bold">Work Experience</h3>
+        <div className="w-2/3 space-y-3">
+          {workExperience.map((work, index) => {
             return (
-              <details className="group bg-dark relative w-full rounded-xl p-4">
+              <details
+                className="group bg-dark relative w-full rounded-xl p-4 hover:cursor-pointer"
+                data-index={index}
+                open={openIndexCareer === index}
+                onClick={(event) => handleToggle(index, event, "career")}
+              >
                 <summary className="marker:color-accent open mb-0 flex items-center justify-between marker:absolute marker:content-none">
-                  <h3 className="text-xl font-bold">
+                  <h4 className="text-xl font-bold">
                     {work.company}
                     <span className="font-thin">{work.role && ` - ${work.role}`}</span>
-                  </h3>
+                  </h4>
                   <div className="flex items-center space-x-12">
                     <span>{work.period}</span>
-                    <PlusIcon className="text-accent mr-0 h-6 w-6 transition-all duration-300 group-open:hidden hover:scale-110 hover:cursor-pointer" />
-                    <MinusIcon className="text-accent hidden h-6 w-6 transition-all duration-300 group-open:block hover:scale-110 hover:cursor-pointer" />
+                    <div>
+                      <PlusIcon className="text-accent mr-0 h-6 w-6 transition-all duration-300 group-open:hidden hover:scale-110 hover:cursor-pointer" />
+                      <MinusIcon className="text-accent hidden h-6 w-6 transition-all duration-300 group-open:block hover:scale-110 hover:cursor-pointer" />
+                    </div>
                   </div>
                 </summary>
-                <div className="mt-6 space-y-6">
-                  <ol className="ml-4 list-inside list-disc">
+                <div className="content mt-6 space-y-6">
+                  <ol className="ml-8 list-outside list-disc">
                     {work.details.map((detail) => {
-                      return <li>{detail}</li>
+                      return (
+                        <li className="marker:text-accent marker:animate-pulse marker:text-xl">
+                          {detail}
+                        </li>
+                      )
                     })}
                   </ol>
                   <div className="flex flex-wrap gap-3">
@@ -117,6 +147,44 @@ export default function Career() {
                       )
                     })}
                   </div>
+                </div>
+              </details>
+            )
+          })}
+        </div>
+
+        <h3 className="text-2xl font-bold">Education</h3>
+
+        <div className="w-2/3 space-y-3">
+          {education.map((school, index) => {
+            return (
+              <details
+                className="group bg-dark relative w-full rounded-xl p-4"
+                data-index={index}
+                open={openIndexEducation === index}
+                onClick={(event) => handleToggle(index, event, "education")}
+              >
+                <summary className="marker:color-accent open mb-0 flex items-center justify-between marker:absolute marker:content-none">
+                  <h4 className="text-xl font-bold">{school.degree}</h4>
+                  <div className="flex items-center space-x-12">
+                    <span>{school.period}</span>{" "}
+                    <div className="flex items-center">
+                      <PlusIcon className="text-accent mr-0 h-6 w-6 transition-all duration-300 group-open:hidden hover:scale-110 hover:cursor-pointer" />
+                      <MinusIcon className="text-accent hidden h-6 w-6 transition-all duration-300 group-open:block hover:scale-110 hover:cursor-pointer" />
+                    </div>
+                  </div>
+                </summary>
+                <div className="content mt-6 space-y-6">
+                  <ol className="ml-8 list-outside list-disc">
+                    <li className="marker:text-accent marker:animate-pulse marker:text-xl">
+                      Grade: {school.grade}
+                    </li>
+                    <li className="marker:text-accent marker:animate-pulse marker:text-xl">
+                      {school.institutions && school.institutions.length > 0
+                        ? school.institutions.join(", ")
+                        : school.institution}
+                    </li>
+                  </ol>
                 </div>
               </details>
             )

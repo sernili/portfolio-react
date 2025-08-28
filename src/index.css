@@ -72,6 +72,7 @@
     scroll-behavior: smooth;
   }
 
+  /* Navigation */
   .focus-peers > .peer:hover ~ .peer,
   .focus-peers > .peer:hover + .peer {
     opacity: 0.2;
