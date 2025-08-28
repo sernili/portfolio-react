@@ -4,8 +4,11 @@ export default function Career() {
   const workExperience = [
     {
       period: "10/2024 – Present",
-      company: "Health-related sabbatical",
-      details: ["Self-directed further training in React and TypeScript"],
+      company: "Sabbatical/ Self-Study",
+      details: [
+        "Health-related sabbatical",
+        "Self-directed further training in React and TypeScript",
+      ],
       tags: ["React", "Next.js", "Typescript"],
     },
     {
@@ -37,13 +40,12 @@ export default function Career() {
     {
       period: "10/2020 – 01/2021",
       company: "Self-study",
-      role: "Frontend Developer Training",
       details: ["Training towards becoming a Frontend Developer"],
       tags: ["HTML", "CSS", "JavaScript"],
     },
     {
       period: "05/2018 – 06/2019",
-      company: "Motion Control and Power Electronics GmbH",
+      company: "M&P GmbH",
       role: "Working Student IT",
       details: [
         "Support in the selection and introduction of a document management system",
@@ -85,14 +87,14 @@ export default function Career() {
         <div>
           <h2 className="my-6 text-center text-8xl font-bold">Career</h2>
         </div>
-        <div className="space-y-4">
+        <div className="w-full space-y-4">
           {workExperience.map((work) => {
             return (
               <details className="group bg-dark relative w-full rounded-xl p-4">
                 <summary className="marker:color-accent open mb-0 flex items-center justify-between marker:absolute marker:content-none">
                   <h3 className="text-xl font-bold">
-                    {work.role && `${work.role} | `}
                     {work.company}
+                    <span className="font-thin">{work.role && ` - ${work.role}`}</span>
                   </h3>
                   <div className="flex items-center space-x-12">
                     <span>{work.period}</span>
@@ -101,7 +103,7 @@ export default function Career() {
                   </div>
                 </summary>
                 <div className="mt-6 space-y-6">
-                  <ol className="list-inside list-disc">
+                  <ol className="ml-4 list-inside list-disc">
                     {work.details.map((detail) => {
                       return <li>{detail}</li>
                     })}
