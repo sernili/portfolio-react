@@ -71,16 +71,14 @@
     color: var(--color-text);
     scroll-behavior: smooth;
   }
-
-  /* Navigation */
-  .focus-peers > .peer:hover ~ .peer,
-  .focus-peers > .peer:hover + .peer {
-    opacity: 0.2;
-  }
 }
 
 @layer utilities {
   .custom-container {
     @apply mx-auto w-full max-w-[1280px] px-4 sm:px-6 lg:px-8;
+  }
+
+  .focus-group {
+    @apply transition-all duration-300 group-hover:opacity-40 hover:opacity-100;
   }
 }

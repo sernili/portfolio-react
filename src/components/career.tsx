@@ -112,7 +112,7 @@ export default function Career() {
           {workExperience.map((work, index) => {
             return (
               <details
-                className="group bg-dark relative w-full rounded-xl p-4"
+                className="bg-dark/80 hover:bg-dark group open:bg-dark relative w-full rounded-xl p-4 transition-all duration-300"
                 data-index={index}
                 open={openIndexCareer === index}
                 onClick={(event) => handleToggle(index, event, "career")}
@@ -162,7 +162,7 @@ export default function Career() {
           {education.map((school, index) => {
             return (
               <details
-                className="group bg-dark relative w-full rounded-xl p-4"
+                className="bg-dark/80 hover:bg-dark group open:bg-dark relative w-full rounded-xl p-4 transition-all duration-300"
                 data-index={index}
                 open={openIndexEducation === index}
                 onClick={(event) => handleToggle(index, event, "education")}
