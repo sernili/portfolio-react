@@ -105,14 +105,14 @@ export default function Career() {
         <div className="mb-20">
           <h2 className="my-6 text-center text-8xl font-bold">Career</h2>
         </div>
-        <h3 className="w-2/3 rounded-xl border border-white bg-gradient-to-br p-4 text-center font-mono text-2xl text-white">
+        <h3 className="w-2/3 rounded-xl p-4 text-center font-mono text-2xl text-white">
           Work Experience
         </h3>
         <div className="w-2/3 space-y-3">
           {workExperience.map((work, index) => {
             return (
               <details
-                className="bg-dark/80 hover:bg-dark group open:bg-dark relative w-full rounded-xl p-4 transition-all duration-300"
+                className="bg-darker/80 hover:bg-darker group open:bg-darker relative w-full rounded-xl p-4 transition-all duration-300"
                 data-index={index}
                 open={openIndexCareer === index}
                 onClick={(event) => handleToggle(index, event, "career")}
@@ -154,7 +154,7 @@ export default function Career() {
             )
           })}
         </div>
-        <h3 className="mt-8 w-2/3 rounded-xl border border-white bg-gradient-to-br p-4 text-center font-mono text-2xl text-white">
+        <h3 className="mt-8 w-2/3 rounded-xl p-4 text-center font-mono text-2xl text-white">
           Education
         </h3>
 
@@ -162,7 +162,7 @@ export default function Career() {
           {education.map((school, index) => {
             return (
               <details
-                className="bg-dark/80 hover:bg-dark group open:bg-dark relative w-full rounded-xl p-4 transition-all duration-300"
+                className="bg-darker/80 hover:bg-darker group open:bg-darker relative w-full rounded-xl p-4 transition-all duration-300"
                 data-index={index}
                 open={openIndexEducation === index}
                 onClick={(event) => handleToggle(index, event, "education")}
