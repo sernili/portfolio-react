@@ -5,6 +5,7 @@ import Profile from "./components/profile"
 import Skills from "./components/skills"
 import Career from "./components/career"
 import Projects from "./components/projects"
+import Contact from "./components/contact"
 
 function App() {
   return (
@@ -27,17 +28,7 @@ function App() {
 
         <Projects />
 
-        <section id="contact-me">
-          <h2>Get In Touch</h2>
-          <h3>Lorem ipsum dolor sit amet, non elit.</h3>
-          <p>
-            Lorem ipsum dolor sit amet, in quis, aenean amet. Phasellus sodales, tellus donec dui,
-            ornare erat.
-          </p>
-          <a className="btn" href="mailto:li.sachse@gmail.com">
-            CONTACT ME
-          </a>
-        </section>
+        <Contact />
       </main>
 
       <footer className="bottom-container">
