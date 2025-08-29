@@ -31,13 +31,13 @@ function App() {
         <Contact />
       </main>
 
-      <footer className="bottom-container">
-        <p>Copyright © 2020 Lisa Sachse</p>
+      <footer className="py-14 text-center text-white">
+        <p>Copyright © {new Date().getFullYear()} Lisa Sachse</p>
+        <p>
+          <a>Impressum</a> &nbsp;|&nbsp;
+          <a>Datenschutz</a>
+        </p>
       </footer>
-
-      <a href="#" className="scroll-btn hide-btn">
-        <i className="fas fa-arrow-up"></i>
-      </a>
     </div>
   )
 }

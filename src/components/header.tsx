@@ -1,18 +1,18 @@
+import { ArrowDownIcon } from "@heroicons/react/24/outline"
+
 export default function Header() {
   return (
     <header className="position h-screen w-screen p-10" id="home">
-      <div className="custom-container flex h-full w-1/2 flex-col items-start justify-center">
-        <h1 className="animate-comeUp1000 font-mono text-6xl text-white">
-          Hi! I'm
-          <br />
-          <span className="text-9xl font-bold">
-            Lisa<span className="text-accent animate-pulse">.</span>
-          </span>
-          <br />
+      <div className="custom-container flex h-full w-full flex-col items-center justify-center text-center">
+        <h1 className="animate-comeUp1000 text-9xl font-bold text-white">
+          Lisa Sachse<span className="text-accent animate-pulse">.</span>
         </h1>
-        <span className="from-secondary to-accent mt-6 bg-gradient-to-tr bg-clip-text text-3xl leading-14 text-transparent">
-          A Frontend Developer <br /> based in Dresden, Germany
+        <span className="from-accent mt-6 bg-gradient-to-r to-white bg-clip-text font-mono text-3xl leading-14 text-transparent">
+          Frontend Development - Made in Germany
         </span>
+        <a href="#profile" className="hover:no-underline">
+          <ArrowDownIcon className="mt-30 h-10 w-10 animate-bounce" />
+        </a>
       </div>
     </header>
     // TODO: scroll down arrow
