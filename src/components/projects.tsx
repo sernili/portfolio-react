@@ -1,11 +1,10 @@
 import yummyImg from "../assets/img/yummy.png"
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/16/solid"
 
 export default function Projects() {
-  const yummyTags = ["React", "Next.js", "Typescript", "Figma", "Zustand", "Tailwind", "Firestore"]
+  const yummyTags = ["Next.js", "Typescript", "Tailwind", "Firestore", "Figma", "Zustand"]
 
   return (
-    <section id="skills">
+    <section id="projects">
       <div className="custom-container my-20 flex h-screen flex-col items-center justify-center space-y-20">
         <div>
           <h2 className="my-6 text-center text-8xl font-bold">Projects</h2>
@@ -53,6 +52,35 @@ export default function Projects() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="space-y-4">
+          <h4>You can also visit me on:</h4>
+          <p className="mb-6">
+            <a
+              href="https://github.com/sernili"
+              target="_blank"
+              className="text-tertiary w-fit border-b hover:font-semibold hover:no-underline"
+            >
+              GitHub
+            </a>
+            &nbsp;|&nbsp;
+            <a
+              href="https://www.linkedin.com/in/lisa-sachse-7269431b4/?originalSubdomain=de"
+              target="_blank"
+              className="text-tertiary border-b hover:font-semibold hover:no-underline"
+            >
+              LinkedIn
+            </a>
+            &nbsp;|&nbsp;
+            <a
+              href="https://www.xing.com/profile/Lisa_Sachse"
+              target="_blank"
+              className="text-tertiary border-b hover:font-semibold hover:no-underline"
+            >
+              XING
+            </a>
+          </p>
         </div>
       </div>
     </section>

@@ -45,9 +45,9 @@ export default function NavBar() {
           </a>
           <a
             className="soft-scroll block no-underline transition-all duration-300 group-hover:opacity-40 hover:opacity-100"
-            href="#projects-overview"
+            href="#projects"
           >
-            Work
+            Projects
           </a>
           <a
             className="soft-scroll hover:text-darker hover:border-darker ml-4 block border p-4 no-underline transition-all duration-300 hover:bg-white"
