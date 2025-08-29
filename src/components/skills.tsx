@@ -6,7 +6,7 @@ export default function Skills() {
           <h2 className="my-6 text-center text-8xl font-bold">Skills</h2>
         </div>
 
-        <div className="flex w-full flex-col items-center gap-y-8 text-white">
+        <div className="flex w-2/3 flex-col items-center gap-y-8 text-white">
           <div className="group grid w-full grid-cols-10 rounded-2xl">
             <div className="from-secondary to-accent z-10 col-span-9 cursor-default rounded-l-2xl bg-gradient-to-r p-2 font-mono">
               HTML
