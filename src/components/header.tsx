@@ -15,6 +15,5 @@ export default function Header() {
         </a>
       </div>
     </header>
-    // TODO: scroll down arrow
   )
 }
