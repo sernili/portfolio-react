@@ -4,6 +4,7 @@ import headerImage from "./assets/img/header.png"
 import Profile from "./components/profile"
 import Skills from "./components/skills"
 import Career from "./components/career"
+import Projects from "./components/projects"
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
 
         <Career />
 
-        <hr />
+        <Projects />
 
         <section id="contact-me">
           <h2>Get In Touch</h2>
