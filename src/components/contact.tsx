@@ -16,11 +16,22 @@ export default function Contact() {
     setFormData({ ...formData, [name]: value })
   }
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    // TODO: implement submit
-    console.log("Form submitted:", formData)
-    setSubmitted(true)
+    try {
+      const res = await fetch("/src/api/resend.tsx", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+      if (res.ok) {
+        setSubmitted(true)
+      } else {
+        console.error("Error submitting form")
+      }
+    } catch (err) {
+      console.error(err)
+    }
   }
 
   return (
