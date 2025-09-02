@@ -33,10 +33,6 @@ function App() {
 
       <footer className="py-14 text-center text-white">
         <p>Copyright © {new Date().getFullYear()} Lisa Sachse</p>
-        <p>
-          <a>Impressum</a> &nbsp;|&nbsp;
-          <a>Datenschutz</a>
-        </p>
       </footer>
     </div>
   )

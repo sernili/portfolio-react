@@ -53,35 +53,6 @@ export default function Projects() {
             </div>
           </div>
         </div>
-
-        <div className="space-y-4">
-          <h4>You can also visit me on:</h4>
-          <p className="mb-6">
-            <a
-              href="https://github.com/sernili"
-              target="_blank"
-              className="text-tertiary w-fit border-b hover:font-semibold hover:no-underline"
-            >
-              GitHub
-            </a>
-            &nbsp;|&nbsp;
-            <a
-              href="https://www.linkedin.com/in/lisa-sachse-7269431b4/?originalSubdomain=de"
-              target="_blank"
-              className="text-tertiary border-b hover:font-semibold hover:no-underline"
-            >
-              LinkedIn
-            </a>
-            &nbsp;|&nbsp;
-            <a
-              href="https://www.xing.com/profile/Lisa_Sachse"
-              target="_blank"
-              className="text-tertiary border-b hover:font-semibold hover:no-underline"
-            >
-              XING
-            </a>
-          </p>
-        </div>
       </div>
     </section>
   )

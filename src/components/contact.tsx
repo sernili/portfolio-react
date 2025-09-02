@@ -1,61 +1,100 @@
-import { useState } from "react"
 import kittieImage from "../assets/img/kitties.jpeg"
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    message: "",
-  })
+  // const [formData, setFormData] = useState({
+  //   firstName: "",
+  //   lastName: "",
+  //   email: "",
+  //   message: "",
+  // })
 
-  const [submitted, setSubmitted] = useState(false)
+  // const [submitted, setSubmitted] = useState(false)
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = event.target
-    setFormData({ ...formData, [name]: value })
-  }
+  // const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  //   const { name, value } = event.target
+  //   setFormData({ ...formData, [name]: value })
+  // }
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    try {
-      const res = await fetch("/src/api/resend.tsx", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      })
-      if (res.ok) {
-        setSubmitted(true)
-      } else {
-        console.error("Error submitting form")
-      }
-    } catch (err) {
-      console.error(err)
-    }
-  }
+  // const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  //   event.preventDefault()
+  //   try {
+  //     const res = await fetch("/src/api/resend.tsx", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify(formData),
+  //     })
+  //     if (res.ok) {
+  //       setSubmitted(true)
+  //     } else {
+  //       console.error("Error submitting form")
+  //     }
+  //   } catch (err) {
+  //     console.error(err)
+  //   }
+  // }
 
   return (
-    <section id="contact-me">
-      <div className="custom-container my-20 flex h-screen flex-col items-center justify-center space-y-20">
-        <div>
-          <h2 className="my-6 text-center text-8xl font-bold">Contact</h2>
-        </div>
+    <section
+      id="contact-me"
+      className="text-darker flex w-full flex-col items-center justify-center bg-white/80"
+    >
+      <div className="flex w-3/4 flex-col items-center justify-center space-y-20 px-8 py-24">
+        <div className="z-0 grid w-full grid-cols-2 flex-col items-center gap-20 gap-y-20">
+          <div className="w-full space-y-8">
+            <div className="mb-14 w-full space-y-8">
+              <h2 className="w-full font-mono text-8xl font-bold">Get in touch!</h2>
+              <p className="font-mono">
+                My assistants will make sure your message reaches me purr-fectly and I’ll get back
+                to you soon!
+              </p>
+            </div>
+            <p>
+              <a
+                href="mailto:l.sachse.professional@gmail.com"
+                target="_blank"
+                className="text-darker after:bg-tertiary relative text-2xl font-bold after:absolute after:bottom-[-10%] after:left-[-5%] after:-z-10 after:h-4 after:w-[110%] after:rounded-2xl after:transition-all after:duration-300 after:ease-in-out after:content-[''] hover:no-underline hover:after:h-[120%]"
+              >
+                l.sachse.professional@gmail.com
+              </a>
+            </p>
+            <div className="z-10 space-y-2 font-mono">
+              <p className="relative z-0 w-fit">
+                <a
+                  href="https://github.com/sernili"
+                  target="_blank"
+                  className="text-darker after:bg-secondary after:absolute after:bottom-0 after:left-0 after:-z-10 after:h-0 after:w-full after:transition-all after:duration-100 after:content-[''] hover:after:h-1"
+                >
+                  GitHub
+                </a>
+              </p>
+              <p className="relative z-0 w-fit">
+                <a
+                  href="https://www.linkedin.com/in/lisa-sachse-7269431b4/?originalSubdomain=de"
+                  target="_blank"
+                  className="text-darker after:bg-secondary after:absolute after:bottom-0 after:left-0 after:-z-10 after:h-0 after:w-full after:transition-all after:duration-100 after:content-[''] hover:after:h-1"
+                >
+                  LinkedIn
+                </a>
+              </p>
+              <p className="relative z-0 w-fit">
+                <a
+                  href="https://www.xing.com/profile/Lisa_Sachse"
+                  target="_blank"
+                  className="text-darker after:bg-secondary after:absolute after:bottom-0 after:left-0 after:-z-10 after:h-0 after:w-full after:transition-all after:duration-100 after:content-[''] hover:after:h-1"
+                >
+                  XING
+                </a>
+              </p>
+            </div>
+          </div>
 
-        <div className="grid w-3/4 grid-cols-2 flex-col items-center gap-12 gap-y-8 rounded-2xl bg-white px-8 py-10 shadow-2xl transition-all duration-300">
           <div className="text-darker flex w-full flex-col items-center justify-center gap-8 text-center">
-            <h3 className="font-mono text-2xl font-bold">Get in touch!</h3>
-
-            <div className="relative h-40 w-40 overflow-hidden rounded-full">
+            <div className="relative h-3/4 w-3/4 overflow-hidden rounded-full">
               <img src={kittieImage} alt="profile image" className="h-full w-full object-cover" />
               <div className="bg-primary absolute inset-0 mix-blend-color"></div>
             </div>
-            <p>
-              My little assistants will make sure your message reaches me purr-fectly and I’ll get
-              back to you soon!
-            </p>
           </div>
-          <div className="w-full">
-            {submitted ? (
+          {/* {submitted ? (
               <p className="text-darker text-center font-mono font-medium">
                 Thank you!
                 <br />
@@ -123,8 +162,7 @@ export default function Contact() {
                   </button>
                 </div>
               </form>
-            )}
-          </div>
+            )} */}
         </div>
       </div>
     </section>
