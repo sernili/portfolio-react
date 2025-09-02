@@ -11,7 +11,7 @@ export default function Header() {
           Frontend Development - Made in Germany
         </span>
         <a href="#profile" className="hover:no-underline">
-          <ArrowDownIcon className="mt-20 h-10 w-10 animate-bounce md:mt-30" />
+          <ArrowDownIcon className="hover:text-tertiary mt-20 h-10 w-10 animate-bounce transition-all duration-300 md:mt-30" />
         </a>
       </div>
     </header>
