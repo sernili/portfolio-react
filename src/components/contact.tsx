@@ -1,4 +1,4 @@
-import kittieImage from "../assets/img/kitties.jpeg"
+import CatImg from "./cats"
 
 export default function Contact() {
   // const [formData, setFormData] = useState({
@@ -38,62 +38,68 @@ export default function Contact() {
       id="contact-me"
       className="text-darker flex w-full flex-col items-center justify-center bg-white/80"
     >
-      <div className="flex w-3/4 flex-col items-center justify-center space-y-20 px-8 py-24">
-        <div className="z-0 grid w-full grid-cols-2 flex-col items-center gap-20 gap-y-20">
-          <div className="w-full space-y-8">
-            <div className="mb-14 w-full space-y-8">
+      <div className="flex w-full flex-col items-center justify-center space-y-20 px-8 py-24 text-center md:w-3/4 lg:text-left">
+        <div className="z-0 w-full space-y-8">
+          <div className="mb-14 grid w-full items-center justify-end gap-8 lg:grid-cols-2">
+            <div className="space-y-12">
               <h2 className="w-full font-mono text-8xl font-bold">Get in touch!</h2>
+              <div className="flex w-full items-center justify-center">
+                <div className="block h-60 w-60 lg:hidden">
+                  <CatImg />
+                </div>
+              </div>
+
               <p className="font-mono">
                 My assistants will make sure your message reaches me purr-fectly and I’ll get back
                 to you soon!
               </p>
             </div>
-            <p>
-              <a
-                href="mailto:l.sachse.professional@gmail.com"
-                target="_blank"
-                className="text-darker after:bg-tertiary relative text-2xl font-bold after:absolute after:bottom-[-10%] after:left-[-5%] after:-z-10 after:h-4 after:w-[110%] after:rounded-2xl after:transition-all after:duration-300 after:ease-in-out after:content-[''] hover:no-underline hover:after:h-[120%]"
-              >
-                l.sachse.professional@gmail.com
-              </a>
-            </p>
-            <div className="z-10 space-y-2 font-mono">
-              <p className="relative z-0 w-fit">
-                <a
-                  href="https://github.com/sernili"
-                  target="_blank"
-                  className="text-darker after:bg-secondary after:absolute after:bottom-0 after:left-0 after:-z-10 after:h-0 after:w-full after:transition-all after:duration-100 after:content-[''] hover:after:h-1"
-                >
-                  GitHub
-                </a>
-              </p>
-              <p className="relative z-0 w-fit">
-                <a
-                  href="https://www.linkedin.com/in/lisa-sachse-7269431b4/?originalSubdomain=de"
-                  target="_blank"
-                  className="text-darker after:bg-secondary after:absolute after:bottom-0 after:left-0 after:-z-10 after:h-0 after:w-full after:transition-all after:duration-100 after:content-[''] hover:after:h-1"
-                >
-                  LinkedIn
-                </a>
-              </p>
-              <p className="relative z-0 w-fit">
-                <a
-                  href="https://www.xing.com/profile/Lisa_Sachse"
-                  target="_blank"
-                  className="text-darker after:bg-secondary after:absolute after:bottom-0 after:left-0 after:-z-10 after:h-0 after:w-full after:transition-all after:duration-100 after:content-[''] hover:after:h-1"
-                >
-                  XING
-                </a>
-              </p>
+            <div className="flex w-full items-center justify-center">
+              <div className="hidden h-80 w-80 lg:block">
+                <CatImg />
+              </div>
             </div>
           </div>
 
-          <div className="text-darker flex w-full flex-col items-center justify-center gap-8 text-center">
-            <div className="relative h-3/4 w-3/4 overflow-hidden rounded-full">
-              <img src={kittieImage} alt="profile image" className="h-full w-full object-cover" />
-              <div className="bg-primary absolute inset-0 mix-blend-color"></div>
-            </div>
+          <p>
+            <a
+              href="mailto:l.sachse.professional@gmail.com"
+              target="_blank"
+              className="text-darker after:bg-tertiary relative text-[clamp(1.25rem,3vw,2rem)] font-bold text-wrap after:absolute after:bottom-[-10%] after:left-[-5%] after:-z-10 after:h-4 after:w-[110%] after:rounded-2xl after:transition-all after:duration-300 after:ease-in-out after:content-[''] hover:no-underline hover:after:h-[120%]"
+            >
+              l.sachse.professional@gmail.com
+            </a>
+          </p>
+          <div className="z-10 w-full flex-col items-center justify-center gap-2 space-y-2 font-mono max-lg:flex">
+            <p className="relative z-0 w-fit">
+              <a
+                href="https://github.com/sernili"
+                target="_blank"
+                className="text-darker after:bg-secondary after:absolute after:bottom-0 after:left-0 after:-z-10 after:h-0 after:w-full after:transition-all after:duration-100 after:content-[''] hover:after:h-1"
+              >
+                GitHub
+              </a>
+            </p>
+            <p className="relative z-0 w-fit">
+              <a
+                href="https://www.linkedin.com/in/lisa-sachse-7269431b4/?originalSubdomain=de"
+                target="_blank"
+                className="text-darker after:bg-secondary after:absolute after:bottom-0 after:left-0 after:-z-10 after:h-0 after:w-full after:transition-all after:duration-100 after:content-[''] hover:after:h-1"
+              >
+                LinkedIn
+              </a>
+            </p>
+            <p className="relative z-0 w-fit">
+              <a
+                href="https://www.xing.com/profile/Lisa_Sachse"
+                target="_blank"
+                className="text-darker after:bg-secondary after:absolute after:bottom-0 after:left-0 after:-z-10 after:h-0 after:w-full after:transition-all after:duration-100 after:content-[''] hover:after:h-1"
+              >
+                XING
+              </a>
+            </p>
           </div>
+
           {/* {submitted ? (
               <p className="text-darker text-center font-mono font-medium">
                 Thank you!
