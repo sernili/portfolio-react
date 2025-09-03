@@ -105,10 +105,10 @@ export default function Career() {
         <div className="mb-20">
           <h2 className="main-header">Career</h2>
         </div>
-        <h3 className="w-2/3 rounded-xl p-4 text-center font-mono text-2xl text-white">
+        <h3 className="md:3/4 w-full rounded-xl p-4 text-center font-mono text-2xl text-white lg:w-2/3">
           Work Experience
         </h3>
-        <div className="w-2/3 space-y-3">
+        <div className="md:3/4 w-full space-y-3 lg:w-2/3">
           {workExperience.map((work, index) => {
             return (
               <details
@@ -119,19 +119,21 @@ export default function Career() {
                 onClick={(event) => handleToggle(index, event, "career")}
               >
                 <summary className="marker:color-accent open mb-0 flex items-center justify-between marker:absolute marker:content-none">
-                  <h4 className="text-xl font-bold">
+                  <h4 className="overflow-hidden text-xl font-bold text-ellipsis whitespace-nowrap">
                     {work.company}
                     <span className="font-thin">{work.role && ` - ${work.role}`}</span>
                   </h4>
                   <div className="flex items-center space-x-4">
-                    <span>{work.period}</span>
+                    <span className="hidden md:block">{work.period}</span>
                     <div>
                       <PlusIcon className="text-accent mr-0 h-6 w-6 transition-all duration-300 group-open:hidden hover:scale-110 hover:cursor-pointer" />
                       <MinusIcon className="text-accent hidden h-6 w-6 transition-all duration-300 group-open:block hover:scale-110 hover:cursor-pointer" />
                     </div>
                   </div>
                 </summary>
-                <div className="content mt-6 space-y-6 transition-all duration-300 not-group-open:p-0 group-open:p-2">
+                <div className="content mt-4 space-y-6 transition-all duration-300 not-group-open:p-0 group-open:p-2 md:mt-6">
+                  <span className="block md:hidden">{work.period}</span>
+
                   <ol className="ml-8 list-outside list-disc">
                     {work.details.map((detail, index) => {
                       return (
@@ -161,11 +163,11 @@ export default function Career() {
             )
           })}
         </div>
-        <h3 className="mt-8 w-2/3 rounded-xl p-4 text-center font-mono text-2xl text-white">
+        <h3 className="md:3/4 mt-8 w-full rounded-xl p-4 text-center font-mono text-2xl text-white lg:w-2/3">
           Education
         </h3>
 
-        <div className="w-2/3 space-y-3">
+        <div className="md:3/4 w-full space-y-3 lg:w-2/3">
           {education.map((school, index) => {
             return (
               <details
@@ -178,14 +180,16 @@ export default function Career() {
                 <summary className="marker:color-accent open mb-0 flex items-center justify-between marker:absolute marker:content-none">
                   <h4 className="text-xl font-bold">{school.degree}</h4>
                   <div className="flex items-center space-x-4">
-                    <span>{school.period}</span>{" "}
+                    <span className="hidden md:block">{school.period}</span>
                     <div className="flex items-center">
                       <PlusIcon className="text-accent mr-0 h-6 w-6 transition-all duration-300 group-open:hidden hover:scale-110 hover:cursor-pointer" />
                       <MinusIcon className="text-accent hidden h-6 w-6 transition-all duration-300 group-open:block hover:scale-110 hover:cursor-pointer" />
                     </div>
                   </div>
                 </summary>
-                <div className="content mt-6 space-y-6 transition-all duration-300 not-group-open:p-0 group-open:p-2">
+                <div className="content mt-4 space-y-6 transition-all duration-300 not-group-open:p-0 group-open:p-2 md:mt-6">
+                  <span className="block md:hidden">{school.period}</span>
+
                   <ol className="ml-8 list-outside list-disc">
                     <li className="marker:text-accent marker:animate-pulse marker:text-xl">
                       Grade: {school.grade}
