@@ -38,11 +38,11 @@ export default function Contact() {
       id="contact-me"
       className="text-darker flex w-full flex-col items-center justify-center bg-white/80"
     >
-      <div className="flex w-full flex-col items-center justify-center space-y-20 px-8 py-24 text-center md:w-2/3 lg:text-left">
-        <div className="z-0 w-full space-y-8">
+      <div className="custom-container flex w-full flex-col items-center justify-center space-y-20 px-8 py-24 text-center md:w-2/3 lg:text-left">
+        <div className="z-0 space-y-8">
           <div className="mb-14 grid w-full items-center justify-end gap-8 lg:grid-cols-2">
             <div className="space-y-12">
-              <h2 className="w-full font-mono text-8xl font-bold">Get in touch!</h2>
+              <h2 className="w-full font-mono text-6xl font-bold md:text-8xl">Get in touch!</h2>
               <div className="flex w-full items-center justify-center">
                 <div className="block h-60 w-60 lg:hidden">
                   <CatImg />
@@ -65,9 +65,11 @@ export default function Contact() {
             <a
               href="mailto:l.sachse.professional@gmail.com"
               target="_blank"
-              className="text-darker after:bg-tertiary relative text-[clamp(1.25rem,3vw,2rem)] font-bold text-wrap after:absolute after:bottom-[-10%] after:left-[-5%] after:-z-10 after:h-4 after:w-[110%] after:rounded-2xl after:transition-all after:duration-300 after:ease-in-out after:content-[''] hover:no-underline hover:after:h-[120%]"
+              className="text-darker max-sm:bg-tertiary after:bg-tertiary max-sm: relative w-full text-[clamp(1.25rem,3vw,2rem)] font-bold after:absolute after:bottom-[-10%] after:left-[-5%] after:-z-10 after:w-[110%] after:rounded-2xl after:transition-all after:duration-300 after:ease-in-out after:content-[''] hover:no-underline hover:after:h-[120%] max-sm:rounded-2xl max-sm:px-2 sm:after:h-4"
             >
-              l.sachse.professional@gmail.com
+              l.sachse.professional
+              <wbr />
+              @gmail.com
             </a>
           </p>
           <div className="z-10 w-full flex-col items-center justify-center gap-2 space-y-2 font-mono max-lg:flex">
