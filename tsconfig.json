@@ -4,6 +4,6 @@
   "compilerOptions": {
     "incremental": true,
     "noUncheckedIndexedAccess": true,
-    "strict": false
+    "strict": true
   }
 }

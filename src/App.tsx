@@ -1,6 +1,5 @@
 import Header from "./components/header"
 import NavBar from "./components/navBar"
-import headerImage from "./assets/img/header.png"
 import Profile from "./components/profile"
 import Skills from "./components/skills"
 import Career from "./components/career"
@@ -10,10 +9,7 @@ import Contact from "./components/contact"
 function App() {
   return (
     <div className="h-full w-full">
-      <div
-        style={{ "--image-url": `url(${headerImage})` }}
-        className="h-screen bg-[image:var(--image-url)] bg-cover bg-center bg-no-repeat"
-      >
+      <div className="h-screen bg-[url('./assets/img/header.png')] bg-cover bg-center bg-no-repeat">
         <NavBar />
 
         <Header />
