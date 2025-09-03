@@ -5,12 +5,12 @@ export default function Profile() {
     <section id="profile" className="w-full">
       <div className="custom-container my-20 flex min-h-screen flex-col items-center justify-center space-y-20">
         <div>
-          <h2 className="my-6 text-center text-4xl font-bold md:text-8xl">Expertise</h2>
+          <h2 className="main-header">Expertise</h2>
         </div>
 
-        <div className="grid items-center gap-12 md:grid-cols-[1fr_1.5fr]">
+        <div className="grid items-center gap-24 lg:grid-cols-[1fr_1.5fr] lg:gap-12">
           <div className="flex w-full items-center justify-center">
-            <div className="relative h-40 w-40 overflow-hidden rounded-full md:h-80 md:w-80">
+            <div className="relative h-60 w-60 overflow-hidden rounded-full md:h-80 md:w-80">
               <img src={profileImage} alt="profile image" className="h-full w-full object-cover" />
               <div className="bg-primary absolute inset-0 mix-blend-color"></div>
             </div>

@@ -103,7 +103,7 @@ export default function Career() {
     <section id="career">
       <div className="custom-container my-20 flex flex-col items-center justify-center space-y-8">
         <div className="mb-20">
-          <h2 className="my-6 text-center text-8xl font-bold">Career</h2>
+          <h2 className="main-header">Career</h2>
         </div>
         <h3 className="w-2/3 rounded-xl p-4 text-center font-mono text-2xl text-white">
           Work Experience
