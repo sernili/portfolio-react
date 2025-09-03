@@ -42,9 +42,12 @@ export default function Projects() {
               </div>
 
               <div className="flex flex-wrap gap-2">
-                {yummyTags.map((tag) => {
+                {yummyTags.map((tag, index) => {
                   return (
-                    <span className="from-secondary to-accent rounded-2xl bg-gradient-to-r px-2 py-1 font-mono text-xs text-white">
+                    <span
+                      key={index}
+                      className="from-secondary to-accent rounded-2xl bg-gradient-to-r px-2 py-1 font-mono text-xs text-white"
+                    >
                       {tag}
                     </span>
                   )

@@ -114,6 +114,7 @@ export default function Career() {
               <details
                 className="bg-darker/80 hover:bg-darker group open:bg-darker relative w-full rounded-xl p-4 transition-all duration-300"
                 data-index={index}
+                key={index}
                 open={openIndexCareer === index}
                 onClick={(event) => handleToggle(index, event, "career")}
               >
@@ -132,18 +133,24 @@ export default function Career() {
                 </summary>
                 <div className="content mt-6 space-y-6 transition-all duration-300 not-group-open:p-0 group-open:p-2">
                   <ol className="ml-8 list-outside list-disc">
-                    {work.details.map((detail) => {
+                    {work.details.map((detail, index) => {
                       return (
-                        <li className="marker:text-accent marker:animate-pulse marker:text-xl">
+                        <li
+                          key={index}
+                          className="marker:text-accent marker:animate-pulse marker:text-xl"
+                        >
                           {detail}
                         </li>
                       )
                     })}
                   </ol>
                   <div className="flex flex-wrap gap-3">
-                    {work.tags.map((tag) => {
+                    {work.tags.map((tag, index) => {
                       return (
-                        <span className="from-secondary to-accent rounded-2xl bg-gradient-to-r px-2 py-1 font-mono text-xs text-white">
+                        <span
+                          key={index}
+                          className="from-secondary to-accent rounded-2xl bg-gradient-to-r px-2 py-1 font-mono text-xs text-white"
+                        >
                           {tag}
                         </span>
                       )
@@ -164,6 +171,7 @@ export default function Career() {
               <details
                 className="bg-darker/80 hover:bg-darker group open:bg-darker relative w-full rounded-xl p-4 transition-all duration-300"
                 data-index={index}
+                key={index}
                 open={openIndexEducation === index}
                 onClick={(event) => handleToggle(index, event, "education")}
               >
