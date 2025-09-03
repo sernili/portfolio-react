@@ -6,9 +6,9 @@ export default function Skills() {
           <h2 className="main-header">Skills</h2>
         </div>
 
-        <div className="flex w-2/3 flex-col items-center gap-y-8 text-white">
+        <div className="flex flex-col items-center gap-y-8 text-white md:w-3/4 lg:w-2/3">
           <div className="group grid w-full grid-cols-10 rounded-2xl">
-            <div className="from-secondary to-accent z-10 col-span-9 cursor-default rounded-l-2xl bg-gradient-to-r p-2 font-mono">
+            <div className="from-secondary to-accent z-10 col-span-9 cursor-default overflow-hidden rounded-l-2xl bg-gradient-to-r p-2 font-mono text-ellipsis whitespace-nowrap">
               HTML
             </div>
             <div className="col-span-1 rounded-r-2xl bg-white p-2">&nbsp;</div>
@@ -20,7 +20,7 @@ export default function Skills() {
           </div>
 
           <div className="group grid w-full grid-cols-10">
-            <div className="from-secondary to-accent z-10 col-span-9 rounded-l-2xl bg-gradient-to-r p-2 font-mono">
+            <div className="from-secondary to-accent z-10 col-span-9 overflow-hidden rounded-l-2xl bg-gradient-to-r p-2 font-mono text-ellipsis whitespace-nowrap">
               CSS (incl. SCSS, Tailwind)
             </div>
             <div className="col-span-1 rounded-r-2xl bg-white p-2">&nbsp;</div>
@@ -32,7 +32,7 @@ export default function Skills() {
           </div>
 
           <div className="group grid w-full grid-cols-10">
-            <div className="from-secondary to-accent z-10 col-span-9 rounded-l-2xl bg-gradient-to-r p-2 font-mono">
+            <div className="from-secondary to-accent z-10 col-span-9 overflow-hidden rounded-l-2xl bg-gradient-to-r p-2 font-mono text-ellipsis whitespace-nowrap">
               JavaScript (ES6)
             </div>
             <div className="col-span-1 rounded-r-2xl bg-white p-2">&nbsp;</div>
@@ -44,7 +44,7 @@ export default function Skills() {
           </div>
 
           <div className="group grid w-full grid-cols-10">
-            <div className="from-secondary to-accent z-10 col-span-5 rounded-l-2xl bg-gradient-to-r p-2 font-mono">
+            <div className="from-secondary to-accent z-10 col-span-5 overflow-hidden rounded-l-2xl bg-gradient-to-r p-2 font-mono text-ellipsis whitespace-nowrap">
               React (incl. Next.js)
             </div>
             <div className="col-span-5 rounded-r-2xl bg-white p-2">&nbsp;</div>
@@ -57,7 +57,7 @@ export default function Skills() {
           </div>
 
           <div className="group grid w-full grid-cols-10">
-            <div className="from-secondary to-accent z-10 col-span-6 rounded-l-2xl bg-gradient-to-r p-2 font-mono">
+            <div className="from-secondary to-accent z-10 col-span-6 overflow-hidden rounded-l-2xl bg-gradient-to-r p-2 font-mono text-ellipsis whitespace-nowrap">
               TypeScript
             </div>
             <div className="col-span-4 rounded-r-2xl bg-white p-2">&nbsp;</div>
@@ -69,7 +69,7 @@ export default function Skills() {
           </div>
 
           <div className="group grid w-full grid-cols-10">
-            <div className="from-secondary to-accent z-10 col-span-4 rounded-l-2xl bg-gradient-to-r p-2 font-mono">
+            <div className="from-secondary to-accent z-10 col-span-4 overflow-hidden rounded-l-2xl bg-gradient-to-r p-2 font-mono text-ellipsis whitespace-nowrap">
               Salesforce B2B Commerce
             </div>
             <div className="col-span-6 rounded-r-2xl bg-white p-2">&nbsp;</div>
@@ -82,7 +82,7 @@ export default function Skills() {
           </div>
 
           <div className="group grid w-full grid-cols-10">
-            <div className="from-secondary to-accent z-10 col-span-6 rounded-l-2xl bg-gradient-to-r p-2 font-mono">
+            <div className="from-secondary to-accent z-10 col-span-6 overflow-hidden rounded-l-2xl bg-gradient-to-r p-2 font-mono text-ellipsis whitespace-nowrap">
               AST (codecept.js/ Playwright)
             </div>
             <div className="col-span-4 rounded-r-2xl bg-white p-2">&nbsp;</div>
