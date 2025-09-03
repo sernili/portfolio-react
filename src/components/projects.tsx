@@ -5,15 +5,19 @@ export default function Projects() {
 
   return (
     <section id="projects">
-      <div className="custom-container my-20 flex h-screen flex-col items-center justify-center space-y-20">
+      <div className="custom-container my-20 flex flex-col items-center justify-center space-y-20">
         <div>
           <h2 className="main-header">Projects</h2>
         </div>
 
-        <div className="flex w-2/3 flex-col items-center gap-y-8 text-white">
-          <div className="bg-darker grid grid-cols-2 gap-8 rounded-2xl p-6 shadow-2xl transition-all duration-300">
-            <img src={yummyImg} alt="yummy" className="h-full w-full rounded-xl object-cover" />
-            <div className="flex h-full flex-col items-start justify-between py-6">
+        <div className="flex w-full flex-col items-center gap-y-8 text-white md:w-3/4 lg:w-2/3">
+          <div className="bg-darker grid gap-8 rounded-2xl p-6 shadow-2xl transition-all duration-300 lg:grid-cols-2">
+            <img
+              src={yummyImg}
+              alt="yummy"
+              className="h-full max-h-60 w-full rounded-xl object-cover lg:max-h-full"
+            />
+            <div className="flex h-full flex-col items-start justify-between gap-6 py-6">
               <div>
                 <h3 className="mb-2 font-mono text-2xl">Yummy!</h3>
                 <p className="mb-6">
